@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Desafio Concrete API - Node</title>
+        <style>
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: '';
+                content: none;
+            }
+
+            .body{
+                background-color:#dad5d5;
+            }
+
+            .principal{
+                width: 98%;
+                height: 90%;
+                position: absolute;
+                background-color: white;
+                border-radius: 5px;
+                padding: 5px;
+                margin: 10px;
+            }
+            .footer {
+                position:absolute;
+                bottom:0;
+                width:99%;
+            }
+
+        </style>
+    </head>
+                
+    <body class="body">
+        
+        <div class="principal">
+            
+            <h1 style="text-align: center">Projeto Concrete - Node</h1>
+            <hr>
+
+            <section style="padding:2px">
+                <h1 style='font-weight:bold;'>Descrição do projeto</h1>
+                <p>Projeto desenvolvido como desafio para vaga de NodeJs </p>
+            </section>
+            
+            <br>
+            
+            <section style="padding:2px">
+                <h1 style='font-weight:bold;'>Recursos disponíveis</h1>
+                <p>
+                    - Cadastro (Sign-up):<br>
+                    URI para acesso: http://concretedesafio-alanmvieira.herokuapp.com/user <br>
+                    Método http: POST <br>
+                    Informações adicionais:<br>
+                    <p style="padding-left: 1%;">Esse recurso consiste na criação de um novo usuário. <br>
+                    É necessário enviar um arquivo JSON contendo os seguintes: campos nome, senha, email e telefones (não obrigatório). O retorno desse recurso consiste nas mesmas informações enviadas com a adição de outros campos, como: token, data de criação etc.<br>
+                    </p>
+
+                </p>
+
+                <br>
+                
+                <p>
+                    - Sign-in:<br>
+                    URI para acesso: http://concretedesafio-alanmvieira.herokuapp.com/user/signin<br>
+                    Método http: POST <br>
+                    Informações adicionais:
+                    <p style="padding-left: 1%;">
+                        Esse recurso consiste na ação de realizar se o e-mail e senha estão corretos considerando os dados salvos no banco de dados.<br>
+                        É necessário enviar um arquivo JSON contendo os seguintes campos: senha e e-mail. O retorno desse recurso consiste na apresentação de todas as informações salvas do usuário.<br>
+                    </p>
+                </p>
+
+                <br>
+
+                <p>
+                    - Busca<br>
+                    URI para acesso: http://concretedesafio-alanmvieira.herokuapp.com//user/USUARIO_ID <br>
+                    Método http: GET <br>
+                    Informações adicionais:
+                    <p style="padding-left: 1%;">
+                        Esse recurso consiste na busca de um usuário considerando o ID do mesmo.<br>
+                        É necessário substituir o campo "USUARIO_ID" descrito na URI para o id do usuário e deve ser enviado um campo com o nome "token" no header da requisição. O valor desse token deve ser igual a algum valor fornecido no momento do cadastro e válido (token sem ter sido expirado)<br>
+
+                    </p>
+                </p>
+
+            </section>
+            
+            <br>
+            
+            <section style="padding:2px">
+                <h1 style='font-weight:bold;'>Opções de desenvolvimento:</h1>
+                
+                <p> - Testes:<br> Foram criados alguns testes unitários. Para a execução é necessário executar o seguinte comando: npm test </p>
+                <br>
+                <p> - Gulp:<br> Foi utilizado gulp para fazer minificação de arquivos js. Para a execução é necessário executar o seguinte comando: npm run gulp</p>
+                <br>
+                <p> - Logs:<br> Utilizando o módulo Winston, foi adicionado o mecanismo para escrita de log. É possível visualizar esse log no arquivo 'api.log' encontrado na pasta "logs"</p>
+
+            </section>
+            
+            
+            <div class="footer">
+                <hr>
+                <h1 style="text-align: right">alanmateus.vn@gmail.com</h1>
+            </div>
+
+
+        </div>
+
+    <body>
+
+</html>
