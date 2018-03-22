@@ -16,7 +16,7 @@ UsuarioService.prototype.buscarPorToken = function(token, callback) {
             callback(null);
         }else {
             logger.info("Erro com mensagem de não autorizado");
-            callback({},"Erro com mensagem de não autorizado");
+            callback(resultado,"Erro com mensagem de não autorizado");
         }
 
     });
@@ -93,7 +93,7 @@ UsuarioService.prototype.salvaUser = function(usuario, callback) {
     var usuarioDao = new this._app.persistencia.UsuarioDao(this._app);
 
     let token = jwt.sign(usuario, constantes.PRIVATE_KEY_JWT, {
-        expiresIn: 60*30 
+        expiresIn: 600*30 
     });
 
     usuario.token = token;

@@ -120,21 +120,20 @@ module.exports = function(app){
                 logger.info("Erro com mensagem de sessão inválida");
                 res.status(401).json({ mensagem: constantes.MENSAGEM_SESSAO_INVALIDA });
                 return;
-
+                
             } else {
-                 
+                
                 let userService = new app.services.UserService(app);
-        
+                
                 userService.buscarPorToken(token, (resultado) => {
-
-                    if( resultado === null ){
                     
+                    if( resultado === null ){
+                        
                         logger.info("Erro com mensagem de não autorizado");
                         res.status(401).json({ mensagem: constantes.MENSAGEM_NAO_AUTORIZADO });
                         return;
                     
                     } else {
-
                         userService.buscaPorId(user_id, token, (erros, resultado) => {
                            
                             if(erros){
