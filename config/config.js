@@ -4,7 +4,7 @@ config.database = {};
 
 config.database.host = "localhost";
 config.database.user = "root";
-config.database.password = "maceio";
+config.database.password = "";
 config.database.database = "concretev1";
 
 module.exports = config;
